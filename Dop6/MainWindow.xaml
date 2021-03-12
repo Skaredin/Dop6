@@ -1,0 +1,59 @@
+﻿<Window x:Class="Dop6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dop6"
+        mc:Ignorable="d"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+
+        
+        Title="Resurce" Height="250" Width="300">
+    <Window.Resources>
+        
+        <SolidColorBrush x:Key="redStyle" Color="BlanchedAlmond"></SolidColorBrush>
+        <Button x:Key="resBut" x:Shared="False" Content="OK" MaxWidth="150" MaxHeight="20" Margin="10 50 10 10 " Background="limeGreen"></Button>
+        <LinearGradientBrush x:Key="gradStyle" StartPoint="0.5,1" EndPoint="0.5,0">
+            <GradientStop Color="Blue" Offset="0"></GradientStop>
+            <GradientStop Color="Red" Offset="1"></GradientStop>
+        </LinearGradientBrush>
+        <Button x:Key="tesBut" Background="{StaticResource gradStyle}">
+            <TextBlock Text="-OK" FontSize="16"></TextBlock>
+        </Button>
+        <col:ArrayList  x:Key="animals">
+            <sys:String>Volk</sys:String>
+            <sys:String>Lisa</sys:String>
+            <sys:String>Zaac</sys:String>
+            <sys:String>Medved</sys:String>
+        </col:ArrayList>
+    </Window.Resources>
+    <Grid Background="{StaticResource redStyle}" >
+        <Button x:Name="But" MaxWidth="150" Margin="10 -190 10 10 " MaxHeight="20" Content="I Gradient" Background="{StaticResource gradStyle}">
+            <Button.Resources>
+                <SolidColorBrush x:Key="darkStule" Color="Gray"></SolidColorBrush>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="But1" MaxWidth="150" Margin="10 -150 10 10 " MaxHeight="20" Content="I Gradient" >
+            <Button.Resources>
+                <SolidColorBrush x:Key="darkStule" Color="Gray"></SolidColorBrush>
+            </Button.Resources>            
+        </Button>
+
+        <ListBox MaxWidth="150" Margin="10 -110 10 10 " MaxHeight="20" ItemsSource="{StaticResource animals}"></ListBox>
+        <Button MaxWidth="150" Margin="10 -70 10 10 " MaxHeight="20" Content="OK" Background = "{StaticResource redStyle}"></Button>
+        <Button  MaxWidth="150" Margin="10 -30 10 10 " MaxHeight="20" Content="OK Dinamik" Background = "{DynamicResource redStyle}" Click="Button_Click"></Button>
+        <Button x:Name="button1" MaxWidth="150" Margin="10 10 10 10 " MaxHeight="20" Content="OK DynamicResource" Click="button1_Click">
+            <Button.Background>
+                <DynamicResource ResourceKey="redStyle"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="But2" MaxWidth="150"  Margin="10 90 10 10 " MaxHeight="20" Content="Следующее задание" Background="{StaticResource butBrash}" Click="But2_Click">
+
+        </Button>
+        <StaticResource ResourceKey="resBut"></StaticResource>
+        
+    </Grid>
+
+   
+</Window>

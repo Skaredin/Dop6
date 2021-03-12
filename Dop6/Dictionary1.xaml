@@ -1,0 +1,13 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Dop6">
+
+    <LinearGradientBrush x:Key="butBrash">
+        <GradientStopCollection>
+            <GradientStop Color="LimeGreen" Offset="1"></GradientStop>
+            <GradientStop Color="Red" Offset="0"></GradientStop>
+            <GradientStop Color="Blue" Offset="2"></GradientStop>
+        </GradientStopCollection>
+        
+    </LinearGradientBrush>
+</ResourceDictionary>

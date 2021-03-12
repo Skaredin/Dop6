@@ -1,0 +1,46 @@
+﻿<Window x:Class="Dop6.News"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dop6"
+        mc:Ignorable="d"
+        Title="News" Height="250" Width="300">
+    <Window.Resources>
+        <Style x:Key="BlackAndWhite" >
+            <Setter Property="Control.FontFamily" Value="Verdana"></Setter>
+            <Setter Property="Control.Background" Value="Lime"></Setter>
+            <Setter Property="Control.Foreground" Value="Red"></Setter>
+            <Setter Property="Control.Margin" Value="10"></Setter>
+        </Style>
+        <Style  TargetType ="Button">
+            <Setter Property="Control.FontFamily" Value="Verdana"></Setter>
+            <Setter Property="Control.Background" Value="Blue"></Setter>
+            <Setter Property="Control.Foreground" Value="Red"></Setter>
+            <Setter Property="Control.Margin" Value="10"></Setter>
+            <EventSetter Event="Button.Click" Handler="Button_Click"></EventSetter>
+        </Style>
+        <Style  x:Key="ButParentStyle" BasedOn="{StaticResource BlackAndWhite}">
+            <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Control.Foreground" Value="Azure"></Setter>
+
+        </Style>
+    </Window.Resources>
+    <StackPanel x:Name="ButStack" Background="Black">
+        <Button x:Name="But1" MaxWidth="150"  MaxHeight="20" Content="I 1" Style="{StaticResource BlackAndWhite}">
+         
+        </Button>
+       
+     
+        
+        <Button x:Name="But6" MaxWidth="150"  MaxHeight="20" Content="I 2 TargetType" >
+
+        </Button>
+        <Button x:Name="But4" MaxWidth="150"  MaxHeight="20" Content="Следующая стр" Click="But4_Click" >
+
+        </Button>
+        <Button x:Name="But3" MaxWidth="150"  MaxHeight="20" Content="I 3 x:Null" Style="{x:Null}">
+
+        </Button>
+    </StackPanel>
+</Window>
